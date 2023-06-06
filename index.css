@@ -1,0 +1,205 @@
+body {
+    height: 80%;
+    width: 80%;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5vw;
+    letter-spacing: 0.05vw;
+}
+
+#root > div {
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#root > div > div {
+    margin-top: 2vw;
+}
+
+.read-only {
+    pointer-events: none;
+    user-select: text;
+}
+
+.container {
+    background-color: aquamarine;
+    min-height: 100px;
+}
+
+.red-color {
+    background-color: red;
+}
+
+.generated-section {
+    height: 20vw;
+
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.generated-section > #code {
+    min-width: 48%;
+    min-height: 100%;
+
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.generated-section > #preview {
+    min-width: 48%;
+    min-height: 95%;
+}
+
+#preview > .preview-container {
+    height: 75%;
+
+    border: 0.25vw solid black;
+}
+
+#code > textarea {
+    display: block;
+    resize: none;
+
+    min-width: 99%;
+    max-width: 99%;
+    height: 80%;
+}
+
+#code > .actions {
+    display: flex;
+    justify-content: space-between;
+
+    min-width: 100%;
+    height: 20%;
+}
+
+.actions > button {
+    max-height: 70%;
+    min-height: 70%;
+    min-width: 49%;
+    margin: auto 0;
+
+    font-size: 1vw;
+}
+
+.setup-section {
+    height: 20vw;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.setup-section > .panels {
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: row;
+    align-content: stretch;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.setup-section > .panels > * {
+    min-width: 30%;
+    max-width: 30%;
+
+    min-height: 100%;
+    max-height: 100%;
+}
+
+.panels textarea {
+    display: block;
+    resize: none;
+
+    min-width: 99%;
+    max-width: 99%;
+    height: 72%;
+}
+
+.setup-section > button {
+    min-width: 30vw;
+    min-height: 2.5vw;
+
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+    word-spacing: 0.75vw;
+}
+
+.setup-section > #css-rules {
+    border: 0.25vw solid black;
+
+    min-width: 100%;
+    min-height: 100%;
+
+    overflow: auto;
+    max-height: inherit;
+}
+
+#css-rules > ul {
+    list-style-type: none;
+    padding: 0;
+    
+    overflow: auto;
+    max-height: 75%;
+}
+
+.css-rule {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1vh;
+}
+
+.css-rule > .key, .value {
+    min-width: 40%;
+    max-width: 40%;
+}
+
+.css-rule > .addRule, .removeRule {
+    min-width: 10%;
+    max-width: 10%;
+
+    border: 0.1vw ridge black;
+    border-radius: 10%;
+}
+
+.addRule, .removeRule {
+    color: white;
+}
+
+.addRule:hover, .removeRule:hover {
+    transition: all 0.1s;
+
+    color: black;
+    cursor: pointer;
+}
+
+.addRule {
+    background-color: rgb(0, 175, 0);
+}
+
+.addRule:hover {
+    background-color: rgb(0, 255, 0);
+}
+
+.removeRule {
+    background-color: rgb(255, 0, 0);
+}
+
+.removeRule:hover {
+    background-color: rgb(255, 150, 150);
+}
